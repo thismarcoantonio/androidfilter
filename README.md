@@ -1,13 +1,27 @@
-# Android Filter
-A Progressive Web Application made with Angular 2 & Love. 
+# Androidfilter
 
-## Why?
-The main reason of this app is LEARNING. I was curious about PWAs and Angular (I've learned a bit of Angular 1 in the past), nothing better than see them closer!
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.4.
 
-## What?
-With the self explanatory name, this application was made with the goal of filter trash and poor apps that Google Play has. Also, should be nice say that all apps in this list was formed based in my opinion, I'm not the better person to say what's good or bad.
+## Development server
 
-## How?
-How I've said at first, I've used Angular 2 and Bulma CSS Framework (and I hate CSS frameworks). I'm not an expert of Angular 2 because I use Vue.js and React more often, but why not try?
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-Soon I'll make an tree of the folders that I have here.
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+
+## Build
+
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+
+## Running unit tests
+
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

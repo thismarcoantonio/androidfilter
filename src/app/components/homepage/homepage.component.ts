@@ -7,9 +7,9 @@ import { AngularFireDatabase } from 'angularfire2/database'
   styleUrls: ['./homepage.component.styl']
 })
 export class HomepageComponent {
-  items: Observable<any[]>;
+  headerItems: Observable<any[]>
 
   constructor(db: AngularFireDatabase) {
-    db.list<any>('listApp').valueChanges().subscribe(res => console.log(res))
+    this.headerItems = db.list<any>('appList', limit => limit.orderByChild('loveCount').limitToLast(10)).valueChanges()
   }
 }

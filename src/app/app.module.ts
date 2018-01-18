@@ -12,12 +12,14 @@ import { AuthModule } from './modules/auth/auth.module'
 
 // Importing Configuration Files
 import { appRouting } from './app.router'
-import { environment } from '../environments/environment'
+import { environment } from '../environments/environment';
+import { HeaderComponent } from './components/header/header.component'
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomepageComponent
+    HomepageComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,

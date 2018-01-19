@@ -1,0 +1,95 @@
+.float-button
+  border-radius 50%
+  background-color #ffd702
+  position fixed
+  bottom 15px
+  right 15px
+  height 50px
+  width 50px
+  box-shadow 0 0 5px rgba(0,0,0,.2)
+  display flex
+  justify-content center
+  align-items center
+  cursor pointer
+  transition all ease .3s
+  z-index 1
+  .float-button_icon
+    display flex
+    flex-direction column
+    justify-content space-between
+    align-items center
+    width 25px
+    height 19px
+    span
+      height 3px
+      display block
+      background #FFFFFF
+      transition all ease .3s
+      &:first-child
+        width 100%
+      &:nth-child(2)
+        width 80%
+      &:nth-child(3)
+        width 60%
+  &:hover
+    background #ffd702 - 20
+
+.sidebar
+  position fixed
+  left 0
+  top 0
+  height 100%
+  width 100%
+  background #ecedef
+  transform translateX(-100%)
+  transition all ease .6s
+  box-shadow none
+  ul
+    display flex
+    flex-direction column
+    height 100%
+    .sidebar_search
+      padding 0
+      cursor default
+      margin-bottom 15px
+      form
+        width 100%
+      input
+        color #4e4e4e
+        padding 30px
+        width 100%
+        font-size 1em
+        border-bottom 1px solid #dfdfdf
+    li
+      width 100%
+      font-size 1.55em
+      padding 15px 30px
+      display flex
+      align-items center
+      cursor pointer
+      color #4e4e4e
+      &:last-child
+        margin-top auto
+        border-top 1px solid #dfdfdf
+
+.float-button_ckd
+  display none
+  &:checked
+    ~ .sidebar      
+      box-shadow 0 0 30px rgba(0,0,0,.5)
+      transform translateX(0)
+    ~ .float-button .float-button_icon span
+      &:nth-child(1)
+        transform rotate(-45deg) translate(-5px, 5px)
+        width 100%
+      &:nth-child(2)
+        transform translateX(100px)
+        opacity 0
+      &:nth-child(3)
+        transform rotate(45deg) translate(-10px, -15px)
+        transform-origin 0
+        width 100%
+
+@media screen and (min-width: 576px)
+  .sidebar
+    max-width 340px

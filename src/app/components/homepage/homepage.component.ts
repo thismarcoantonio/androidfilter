@@ -1,15 +1,21 @@
-import { Component } from '@angular/core'
+import { Component, OnInit } from '@angular/core'
 import { Observable } from 'rxjs/Observable'
-import { AngularFireDatabase } from 'angularfire2/database'
+
+import { HomepageService } from './homepage.service'
+
+//const newKey = afDb.list('/items').push(newItem).key
 
 @Component({
   templateUrl: './homepage.component.html',
-  styleUrls: ['./homepage.component.styl']
+  styleUrls: ['./homepage.component.styl'],
+  providers: [ HomepageService ]
 })
-export class HomepageComponent {
+export class HomepageComponent implements OnInit {
   headerItems: Observable<any[]>
 
-  constructor(db: AngularFireDatabase) {
-    this.headerItems = db.list<any>('appList', limit => limit.orderByChild('loveCount').limitToLast(10)).valueChanges()
+  constructor(private mainService: HomepageService) {}
+
+  ngOnInit() {
+    this.headerItems = this.mainService.getHeaderItems()
   }
 }

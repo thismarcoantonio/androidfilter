@@ -1,3 +1,16 @@
-<p>
-  header works!
-</p>
+<header class="app-header">
+  <div class="app-header_brand">
+    <h1 class="app-header_title">Android Filter</h1>
+    <h2 class="app-header_description">Filter your apps, filter your happiness</h2>
+  </div>
+
+  <nav class="app-header_list scrollable" [ngClass]="{ 'fade-in': (items | async)?.length > 0 }">
+    <ul [ngClass]="{ 'slide-right-in': (items | async)?.length > 0 }">
+      <li *ngFor="let item of items | async" class="cursor-pointer">
+        <a [routerLink]="['/app', item.id]">
+          <img [src]="item.displayImg">
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>

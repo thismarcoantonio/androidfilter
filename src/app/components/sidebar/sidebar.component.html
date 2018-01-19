@@ -1,0 +1,24 @@
+<input type="checkbox" id="float-checkbox" class="float-button_ckd">
+
+<label class="float-button" for="float-checkbox">
+  <div class="float-button_icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</label>
+
+<nav class="sidebar">
+  <ul>
+    <li  *ngIf="false" class="sidebar_search">
+      <form (submit)="searchItems($event)">
+        <input type="text" placeholder="Search" name="search">
+      </form>
+    </li>
+    <li *ngIf="false" >Filter by genre</li>
+    <li *ngIf="false" >Filter by platforms</li>
+    <li *ngIf="false" >Filter by loveCount</li>
+    <li *ngIf="false" >Filter by price</li>
+    <li>Login</li>
+  </ul>
+</nav>

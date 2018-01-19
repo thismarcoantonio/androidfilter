@@ -7,27 +7,25 @@ import { AngularFireDatabaseModule, AngularFireDatabase } from 'angularfire2/dat
 import { AppComponent } from './app.component'
 import { HomepageComponent } from './components/homepage/homepage.component'
 
-// Importing Modules
-import { AuthModule } from './modules/auth/auth.module'
-
 // Importing Configuration Files
 import { appRouting } from './app.router'
 import { environment } from '../environments/environment';
 import { HeaderComponent } from './components/header/header.component'
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
-    HeaderComponent
+    HeaderComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase),
-    appRouting,
-    AuthModule
+    appRouting
   ],
   providers: [ AngularFireDatabaseModule, AngularFireDatabase ],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
